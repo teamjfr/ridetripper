@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script 
+    src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous">
+    </script>
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+    <title>Driver Sign In/Up Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style/driversign.css">
+     </head>
+  <body>
+    <header>
+        <div class="inner-width">
+            <span class="logo">Ridetripper</span>
+          <i class="menu-toggle-btn fas fa-bars"></i>
+          <div class="navigation_bar_class">
+            <a href="./homepage.php"><i class="fas fa-home home"></i> Home</a>
+            <a href="./driver_rider.html"><i class="fas fa-sign-in-alt login"></i> Login</a>
+            <a href="./contact.php"><i class="fas fa-headset contact"></i> Contact</a>
+          </div>
+            
+        </div>
+      </header> 
+      <div class="driver-sign">
+        <div class="container">
+            <div class="forms-container">
+                <div class="signin-signup">
+                    <form action="sign_confirm.php" method="POST" class="sign-in-form">
+                    <h2 class="title">Sign In</h2>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="emailid" placeholder="Email Id" required>
+                    </div>
+                    <div class="input-field">
+                     <i class="fas fa-lock"></i>
+                     <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                  
+                    <label id="remember"><input type="checkbox" name="remember" value="remember"> Remember Me</label>
+                    <input type="submit" name="driver_in_submit" value="Login" class="btn solid">
+                    </form>
+     
+                    <form action="#" class="sign-up-form">
+                     <h2 class="title">Sign Up</h2>
+                     <div class="input-field">
+                         <i class="fas fa-user"></i>
+                         <input type="text" placeholder="Username" id="up_user_name" required>
+                     </div>
+                     <div class="input-field">
+                         <i class="fas fa-envelope"></i>
+                         <input type="text" placeholder="Email" id="up_emailid" required>
+                     </div>
+                     <div class="input-field">
+                         <i class="fas fa-phone-alt"></i>
+                         <input type="tel" placeholder="Phone" id="up_phoneno" required>
+                     </div>
+                     <div class="input-field">
+                         <i class="fas fa-map-marker-alt"></i>
+                         <input type="text" placeholder="Address" id="up_address" required>
+                     </div>
+                     <div class="input-field">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" id="up_password" required>
+                     </div>
+                     <div class="input-field">
+                         <i class="fas fa-lock"></i>
+                         <input type="password" placeholder="Re-Password" id="up_re_password" required>
+                     </div>
+
+                     <div class="securityCode">
+                        <p id="code"></p>
+                        <div class="icons">
+                            <span class="changeText">
+                                <i class="fas fa-sync-alt"></i>
+                            </span>
+                         </div>
+                    </div>
+                    <div class="input-field">
+                        <i></i>
+                        <input autocomplete="off" type="text" id="captcha" placeholder="Enter the Captcha" required> 
+                    </div>
+                     <input type="button" value="Sign Up" id="form-sign-up-button" class="btn solid">
+                     </form>
+
+                     <form action="reg_confirm.php" method="POST" enctype="multipart/form-data" class="verification-form">
+                        <h2 class="title">Verification</h2>
+                        <div class="input-field">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <label class="button-img" for="user-img">Your Image</label>
+                            <input type="file" name="user_image" id="user-img" required>
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                            <label class="button-img" for="car-img">Car Image</label>
+                            <input type="file" name="car_image" id="car-img" required>
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                            <label class="button-img" for="driving-img">Driving License Image</label>
+                            <input type="file" name="driving_image" id="driving-img" required>
+                            
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                            <input type="text" name="driving_number" placeholder="Driving License Number" required>
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                            <label class="button-img" for="nid-img">National ID Card Image</label>
+                            <input type="file" name="nid_image" id="nid-img" required>          
+                            
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                            <label class="button-img" for="car-license-img">Car License Image</label>
+                            <input type="file" name="car_license_image" id="car-license-img" required>
+                            
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                            <input type="text" name="car_license_number" placeholder="Car License Number" required>
+                        </div>
+
+                        <input type="hidden" name="user_name" id="user_name" required >
+                        <input type="hidden" name="emailid" id="emailid" required >
+                        <input type="hidden" name="phoneno" id="phoneno" irequired >
+                        <input type="hidden" name="address" id="address" required >
+                        <input type="hidden" name="password"  id="password" required >
+                        <input type="submit" name="driver_up_submit" value="Submit" class="btn solid">
+                        </form>
+                     
+                     
+                </div>
+            </div>
+     
+            <div class="panels-container">
+     
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>New Here ?</h3>
+                        <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+                        <img src="image/3411096.jpg" class="image" alt="">
+                    </div>
+                </div>
+     
+                <div class="panel right-panel">
+                 <div class="content">
+                     <h3>Already Registered ?</h3>
+                     <button class="btn transparent" id="sign-in-btn">Sign In</button>
+                     <img src="image/desk.svg" class="image" alt="Desk">
+                 </div>
+             </div>
+     
+            </div>
+            <div class="popup">
+                <div class="wrapper">
+                   <div class="image">
+                      <img src="" alt="" class="preview-img">
+                   </div>
+                   <div class="content">
+                      <div class="icon">
+                         <i class="fas fa-cloud-upload-alt"></i>
+                      </div>
+                      <div class="text">
+                         No file chosen, yet!
+                      </div>
+                   </div>
+                   <div id="cancel-btn">
+                      <i class="fas fa-times"></i>
+                   </div>
+                   <div id="select-btn">
+                      <i class="fas fa-check"></i>
+                   </div>
+                   <div class="file-name">
+                      File name here
+                   </div>
+                </div>
+
+                </div>
+        </div>
+    </div>
+    <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="src/driversign.js"></script>
+  </body>
+</html>
