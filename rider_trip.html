@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Rider Trip Form </title>
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.css"
+    integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+    crossorigin="">
+    
+    <link rel="stylesheet" href="style/rider_trip.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body> 
+  <header>
+    <div class="inner-width">
+      <span class="logo">Ridetripper</span>
+      <i class="menu-toggle-btn fas fa-bars"></i>
+      <div class="navigation_bar_class">
+        <a href="./homepage.php"><i class="fas fa-home home"></i> Home</a>
+        <a href="user_profile.php"><i class="fas fa-user user"></i> Profile</a>
+        <a href="./rider_upcoming.php"><i class="fas fa-car car"></i> Upcoming Trip</a>
+        <a href="./logout.php"><i class="fas fa-sign-out-alt logout" aria-hidden="true"></i> Log Out</a>
+        <a href="./contact.php"><i class="fas fa-headset contact"></i> Contact</a>
+      </div>
+        
+    </div>
+  </header>    
+
+  <div class="rider-trip">
+    <div class="container">
+      <div class="title">Trip Information</div>
+       <div class="content">
+        <form action="rider_route.php" method="POST">
+          <div class="user-details">
+            <div class="input-box">
+              <input type="button" id="start-location-select" value="Enter Pickup Point" required>
+             </div>
+             <div class="input-box">
+              <input type="button" id="end-location-select" value="Where To?" required>
+             </div>
+             <div class="input-box">
+              <input type="text" class="datepicker" name="starting_date" placeholder="Starting Date" required>
+             </div>
+             <div class="input-box">
+              <select name="number_of_seats">
+                  <option disabled selected>Number Of Seat</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+              </select>
+             </div>
+            <input type="hidden" name="starting_lat" id="starting_lat" required>
+            <input type="hidden" name="starting_lng"id="starting_lng" required>
+            <input type="hidden" name="ending_lat" id="ending_lat"  required>
+            <input type="hidden" name="ending_lng" id="ending_lng"  required>
+            <input type="hidden" name="pickup_point" id="pickup_point" required>
+          </div>
+          <div class="button">
+            <input type="submit" value="Search Trip" id="button-for-search">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-popup">
+    <div id="map"></div>
+  </div>
+  <div class="map-popup1">
+     <p id="location"></p>
+     <button id="button-for-selection">Select Location</button>
+  </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>      
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+
+    <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
+    integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.js"
+    integrity="sha512-HrFUyCEtIpxZloTgEKKMq4RFYhxjJkCiF5sDxuAokklOeZ68U2NPfh4MFtyIVWlsKtVbK5GD2/JzFyAfvT5ejA=="
+    crossorigin=""></script>
+
+    <script src="src/rider_trip.js"></script>
+</body>
+</html>
