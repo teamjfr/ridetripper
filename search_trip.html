@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Trip Info</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="style/search_trip.css">
+</head>
+<body>
+  <header>
+    <div class="inner-width">
+      <span class="logo">Ridetripper</span>
+      <i class="menu-toggle-btn fas fa-bars"></i>
+      <div class="navigation_bar_class">
+        <a href="./homepage.php"><i class="fas fa-home home"></i> Home</a>
+        <a href="./user_profile.php"><i class="fas fa-user user"></i> Profile</a>
+        <a href="./rider_trip_info.html"><i class="fas fa-car car"></i> Upcoming Trip</a>
+        <a href="./logout.php"><i class="fas fa-sign-out-alt logout" aria-hidden="true"></i> Log Out</a>
+        <a href="./contact.php"><i class="fas fa-headset contact"></i> Contact</a>
+      </div>   
+    </div>
+  </header>
+
+    <div class="rider_search_trip">
+    <div class="title">
+        <span>SEARCHED TRIP</span>   
+    </div>
+
+     <table id="infoTable">
+      <thead>
+        <tr>
+          <th>Distance</th>
+        </tr>
+      </thead>
+    </table>
+     <h2 id="error_msg"></h2>   
+    <table id="searchTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Type</th>
+            <th>Vehicle No</th>
+            <th>Time</th>
+            <th>Seats</th>
+            <th>Cost Per Seat</th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <form action="rider_trip_confirm.php" method="POST">
+      <input type="hidden" name="p_point" id="p_point" required>
+      <input type="hidden" name="a_seat"id="a_seat" required>
+      <input type="hidden" name="c_trip_id" id="c_trip_id"  required>
+      <input type="hidden" name="c_trip_cost" id="c_trip_cost" required>
+      <input type="submit" name="submit" id="submit"  required>
+    </form>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script src="src/search_trip.js">
+
+      </script>
+</body>
+</html>
