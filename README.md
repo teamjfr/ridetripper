@@ -1,6 +1,7 @@
 # CSE 4510 Project
 # Ridetrippper
-A ridesharing web application for car pooling
+A convenient ridesharing web application for car pooling services and sharing rides seamlessly on the web.
+
 Live Site Link: https://swe-ridetripper.freecluster.eu/RideTrippervFinal/homepage.php
 
 **How it will work?**
