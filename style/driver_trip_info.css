@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Open Sans",sans-serif;
+  }
+  body{
+      height: 100%;
+      background: #71b7e6;
+  }
+
+  header{
+    height: 100px;
+    background: #2f3640;
+  }
+  
+  header{
+    height: 90px;
+    background: #2f3640;
+  }
+  
+  .inner-width{
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
+  }
+  
+  .logo{
+    position: absolute;
+    color: white;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .navigation_bar_class{
+    float: right;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+  }
+  
+  .navigation_bar_class a{
+    margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 15px;
+  border-radius: 4px;
+  transition: .3s linear;
+  }
+  
+  .navigation_bar_class a:hover{
+    background: #fff;
+    color: #2f3640;
+    transform: scale(1.1);
+  }
+  
+  .navigation_bar_class i{
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  .home{
+    color: #ff6b6b;
+  }
+  
+  .user{
+    color: #0abde3;
+  }
+  
+  .car{
+    color: #feca57;
+  }
+  
+  .logout{
+    color: #5f27cd;
+  }
+  
+  .contact{
+    color: #1dd1a1;
+  }
+  
+  .menu-toggle-btn{
+    float: right;
+    height: 90px;
+    line-height: 90px !important;
+    color: #fff;
+    font-size: 26px;
+    display: none !important;
+    cursor: pointer;
+  }
+  
+  
+  @media screen and (max-width: 955px) {
+    .menu-toggle-btn{
+      display: block !important;
+    }
+  
+    .navigation_bar_class{
+      position: fixed;
+      width: 100%;
+      max-width: 400px;
+      background: #172b4d;
+      top: 90px;
+      right: 0;
+      display: none;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+  
+    .navigation_bar_class::before{
+      content: "";
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #172b4d;
+      position: absolute;
+      top: -10px;
+      right: 10px;
+    }
+
+  
+    .navigation_bar_class a{
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .navigation_bar_class.active{
+      display: block;
+    }
+  }
+  .driver_trip_info{
+    font-family: Mukta, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #4f546c;
+    font-size: 0.9rem;
+     
+  }
+
+  .driver_trip_info .title{
+    margin-top: 55px;
+    color: white;
+    font-size: 75px;
+    font-weight: bold;
+    
+ }
+ .driver_trip_info .btn-details{
+   color: #4f546c;
+   background-color: #f9fbff;
+   font-size: 0.9rem;
+   text-align: left;
+   border: none;
+   box-shadow: 0 5px 10px #e1e5ee;
+ }
+
+ .driver_trip_info table {
+   border-collapse: collapse;
+   box-shadow: 0 5px 10px #e1e5ee;
+   text-align: left;
+   overflow: hidden;
+ }
+
+ .driver_trip_info thead {
+   box-shadow: 0 5px 10px #e1e5ee;
+ }
+
+ .driver_trip_info th {
+   padding: 1rem 2rem;
+   text-transform: uppercase;
+   letter-spacing: 0.1rem;
+   font-size: 0.7rem;
+   font-weight: 900;
+ }
+
+ .driver_trip_info td {
+   padding: 1rem 2rem;
+ }
+
+ .driver_trip_info tr:nth-child(even) {
+   background-color: #f4f6fb;
+ }
+
+ .driver_trip_info  tr:nth-child(odd){
+   background-color: white;
+ }
+
+ .driver_trip_info .popup{
+   position: absolute;
+   left: 70%;
+   background: black;
+   padding: 0 25px;
+   border-radius: 15px;
+   margin-top: -300px;
+   max-width: 750px;
+   width: 100%;
+   height: 0;
+   opacity: 0;
+   pointer-events: none;
+   box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+   transform: translate(-50%, 0%) scale(1.2);
+   transition: top 0s 0.2s ease-in-out,
+               opacity 0.2s 0s ease-in-out,
+               transform 0.2s 0s ease-in-out;
+ }
+ .driver_trip_info .popup.show{
+   top: 50%;
+   opacity: 1;
+   pointer-events: auto;
+   transform:translate(-50%, -50%) scale(1);
+   transition: top 0s 0s ease-in-out,
+               opacity 0.2s 0s ease-in-out,
+               transform 0.2s 0s ease-in-out;
+ 
+ }
+ .driver_trip_info .popup header{
+   display: flex;
+   align-items: center;
+   color: white;
+   padding-left: 10px;
+   width: 75;
+   justify-content: space-between;
+   border-radius: 5px;
+   border-bottom: 1px solid #ebedf9;
+ }
+ .driver_trip_info .popup header span{
+   font-size: 30px;
+   font-weight: 600;
+ }
+
+ .driver_trip_info .popup #myTable1{
+   margin-left: -10px;
+ }
+ .driver_trip_info .popup #myTable1 thead tr{
+   height: 50px;
+   background-color: rgb(156, 163, 235);
+ }
+
+ .driver_trip_info .popup header .close{
+   display: flex;
+ align-items: center;
+ border-radius: 50%;
+ justify-content: center;
+ transition: all 0.3s ease-in-out;
+   color: #878787;
+   font-size: 17px;
+   background: #f2f3fb;
+   height: 33px;
+   width: 33px;
+   cursor: pointer;
+ }
+
+ .driver_trip_info .popup header .close:hover{
+   background: #ebedf9;
+ }
+ @media (max-width:1170px){
+.driver_trip_info .popup{
+  left:60%;
+}
+ }
+ @media (max-width:845px){
+
+  .driver_trip_info .popup{
+    left: 50%;
+  }
+    .driver_trip_info thead{
+     display: none;
+   }
+
+   .driver_trip_info  table ,
+   .driver_trip_info tbody ,
+   .driver_trip_info tr,
+   .driver_trip_info td{
+       
+     display: block;
+     width: 100%;
+   }
+
+   .driver_trip_info .popup #myTable1{
+     margin-left: 0px;
+   }
+
+   .driver_trip_info  td{
+     border: 0.5px solid  grey;
+   }
+
+   .driver_trip_info tr{
+     margin-bottom: 15px;
+   }
+
+   .driver_trip_info tbody tr td{
+     text-align: right;
+     padding-left: 20%;
+     position: relative;
+   }
+
+   .driver_trip_info td::before{
+     content: attr(data-label);
+     position: absolute;
+     left:0;
+     font-size: 20px;
+     padding-left: 5px;
+     text-align: left;
+
+   }
+   .driver_trip_info .popup td::before{
+     width: 20%;
+   }
+
+ }
+
+ @media(max-width:432px){
+    .driver_trip_info table{
+     width: calc(100%-20px);
+   }
+   
+   .driver_trip_info .popup td::before{
+     font-size: .7rem;
+   }
+
+ }
+ #error_msg{
+  font-size: 2.5rem;
+ padding: 3rem 0;
+ color: white;
+}
+ #submit{
+   visibility: hidden;
+ }

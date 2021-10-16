@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Trip Info</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="style/driver_trip_info.css">
+</head>
+<body>
+
+  <header>
+    <div class="inner-width">
+      <span class="logo">Ridetripper</span>
+      <i class="menu-toggle-btn fas fa-bars"></i>
+      <div class="navigation_bar_class">
+        <a href="./homepage.php"><i class="fas fa-home home"></i> Home</a>
+        <a href="./user_profile.php"><i class="fas fa-user user"></i> Profile</a>
+        <a href=""><i class="fas fa-car car"></i> Upcoming Trip</a>
+        <a href="./logout.php"><i class="fas fa-sign-out-alt logout" aria-hidden="true"></i> Log Out</a>
+        <a href="./contact.php"><i class="fas fa-headset contact"></i> Contact</a>
+      </div>   
+    </div>
+  </header>
+    <div class="driver_trip_info">
+    <div class="title">
+        <span>UPCOMING TRIP</span>
+    </div>
+    <h2 id="error_msg"></h2> 
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>From</th>
+            <th>To</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+
+      <div class="popup">
+        <header>
+          <span>Passenger</span>
+          <div class="close"><i class="uil uil-times"></i></div>
+        </header>
+        <table id="myTable1">
+          <thead>
+            <tr>
+              <th>Rider Name</th>
+              <th>Contact Number</th>
+              <th>Pick Up Point</th>
+              <th>Number Of Seats</th>
+              <th>Fare</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <form action="delete_trip.php" method="POST">
+        <input type="hidden" name="trip_id" id="trip_id" required>
+        <input type="submit" name="submit" id="submit"  required>
+      </form>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </div>
+      <script src="src/driver_trip_info.js">
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Open Sans",sans-serif;
+}
+
+body{
+  background-color: #217794;
+  }
+@Keyframes spin{
+100%{
+transform: rotate(360deg);
+}
+}
+.inside_container{
+width: 40px;
+margin: 250px auto;
+}
+.dot{
+width: 10px;
+height: 10px;	
+display: inline-block;
+border-radius: 50%;
+
+}
+.dot1{
+background-color: #1abc9c;
+animation: jump-up 0.6s 0.1s linear infinite;
+}
+.dot2{
+background-color: #ffd64a;
+animation: jump-up 0.6s 0.2s linear infinite;
+}
+.dot3{
+background-color: #e067af;
+animation: jump-up 0.6s 0.3s linear infinite;
+}
+@Keyframes jump-up{
+50%{
+transform: translate(0,15px);
+}
+}
+ 
+h3{
+    margin-top: -50px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-left: 30%;
+    color: white;
+}
+  .map-popup2{
+    z-index: 10;
+    opacity: 0;
+    width: 80vw;
+    height: 65vh;
+    position: relative;
+    visibility: hidden;
+    margin: -400px auto 30px;
+    border-radius: 2px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0,0, .4);
+    transition: top 0s 0.2s ease-in-out,
+    opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+}
+
+.map-popup3{
+  z-index: 10;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  width: auto;
+  border-radius: 2px;
+  margin-top: 130px;
+  background: #004c66;
+  box-shadow: 0 2px 12px 0 rgba(0, 0,0, .4);
+  transition: top 0s 0.2s ease-in-out,
+  opacity 0.2s 0s ease-in-out,
+  transform 0.2s 0s ease-in-out;
+}
+#map1{
+    width: 70vw;
+    height: 70vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#map1{
+  width: 80vw;
+}
+
+
+
+#button-for-route-confirmation,#button-for-cancellation{
+  width: 120px;
+    font-size: 2rem;
+    border: none;
+    font-weight: 600;
+    background: #004c66;
+    border-radius: 2px;
+    color: white;
+    box-shadow: 0 2px 12px 0 rgba(0, 0,0, .4);
+    position: absolute;
+    margin-top: 40px;
+    
+}
+#button-for-route-confirmation{
+  left: 40%;
+    top: 50%;
+    transform: translate(-50%,-40%);
+}
+
+#button-for-cancellation{
+  left: 60%;
+    top: 50%;
+    transform: translate(-50%,-40%);
+}
+
+#button-for-route-confirmation,#button-for-cancellation{
+  margin-top: -80px;
+}
+
+.map-popup2.show,.map-popup3.show{
+    opacity: 1;
+    visibility: visible;
+    transition: top 0s 0s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+}
+@media (max-width:1200px){
+    .map-popup2{
+      width: 90vw;
+    }
+    #map1{
+        width: 90vw;
+    }
+}
+
+#submit{
+  visibility: hidden;
+}
