@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Open Sans",sans-serif;
+  }
+  body{
+    background-color: #c3c3c3;
+  }
+
+.container{
+    margin-top: 50px;
+   
+}
+
+img{
+    
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 40vw;
+}
+
+h3{
+  margin-top: 0px;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-left: 30%;
+}
+
+@media(max-width: 900px){
+
+  img{
+      margin-top: 200px;
+  }
+h3{
+   font-size: 2rem;
+}
+}
